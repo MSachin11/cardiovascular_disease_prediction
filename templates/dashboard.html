@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #85FFBD, #FFFB7D);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Patient Details</h1>
+    <form action="/predict" method="POST">
+        Age (days): <input type="text" name="age" required><br>
+        Height (cm): <input type="text" name="height" required><br>
+        Weight (kg): <input type="text" name="weight" required><br>
+        Gender (1: Male, 2: Female): <input type="text" name="gender" required><br>
+        Systolic blood pressure: <input type="text" name="ap_hi" required><br>
+        Diastolic blood pressure: <input type="text" name="ap_lo" required><br>
+        Cholesterol (1: normal, 2: above normal, 3: well above normal): <input type="text" name="cholesterol" required><br>
+        Glucose (1: normal, 2: above normal, 3: well above normal): <input type="text" name="gluc" required><br>
+        Smoking (0: No, 1: Yes): <input type="text" name="smoke" required><br>
+        Alcohol intake (0: No, 1: Yes): <input type="text" name="alco" required><br>
+        Physical activity (0: No, 1: Yes): <input type="text" name="active" required><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
